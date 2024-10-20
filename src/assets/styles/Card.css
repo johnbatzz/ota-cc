@@ -1,0 +1,70 @@
+.card-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 8px;
+    overflow-y: hidden;
+}
+
+.card {
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+}
+
+.card-image-container {
+    display: flex;
+    background: #cacaca;
+}
+
+.card-image-container img {
+    margin: auto;
+    width: 100%;
+}
+
+.card-content {
+    padding: 8px;
+    gap: 4px;
+}
+
+.card-content h3 {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.progress-bar {
+    width: 165px;
+    height: 10px;
+    background: #cacaca;
+}
+
+.progress-bar-inner {
+    background-color: #702fd3;
+    height: 100%;
+}
+
+progress::-moz-progress-bar {
+    background-color: #702fd3;
+}
+
+progress::-webkit-progress-value {
+    background-color: #702fd3;
+}
+
+progress {
+    background-color: #702fd3;
+    color: #702fd3;
+}
+.card-content .percentage {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .card {
+        height: 220px;
+        width: 183px;
+    }
+}

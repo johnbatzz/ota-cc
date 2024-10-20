@@ -1,0 +1,7 @@
+.home {
+    background: #702fd3;
+}
+
+@import url(Heading.css);
+@import url(Product.css);
+@import url(Card.css);
