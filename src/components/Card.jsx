@@ -15,11 +15,18 @@ const Card = ({item}) => {
             </div>
             <div className="card-content">
                 <img src={item.brand_image} alt={item.brand_name} className="card-image" />
-                <h3>{item.product_name}</h3>
-                <div className='progress-bar'>
-                    <div className='progress-bar-inner' style={{width: `${percentage}%`, color: `#702fd3`}}></div>
+                <div className="card-desc">
+                    <div className='card-text'>
+                         <div>{item.title}</div>
+                        <div>{item.brand_name}</div>
+                        <div>{item.product_name}</div>
+                    </div>
+
+                    <div className='progress-bar'>
+                        <div className='progress-bar-inner' style={{width: `${percentage}%`, color: `#702fd3`}}></div>
+                    </div>
+                    <span className='percentage'>{percentage} % Complete</span>
                 </div>
-                <span className='percentage'>{percentage} % Complete</span>
             </div>
         </div>
     )
