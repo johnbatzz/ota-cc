@@ -19,12 +19,14 @@ function ImageWithFallback({ src, alt, fallbackSrc, width = '200px', height='100
     <div style={{ width: width, height: height, position: 'relative' }}>
       {!isLoaded && !hasError && 
         <img src='/image/loading.gif' height={height} width={width} alt='Loading...'></img>}
-      {hasError && <p>Image failed to load!</p>}
+      {hasError && <p className='image-error' style={{height: height, width: width, position: 'absolute', top: 0, left: 0, textAlign: 'center', fontSize: '8px'}}>Image failed to load!</p>}
       <img
         src={imgSrc}
         alt={alt}
         onError={handleError}
         onLoad={handleLoad}
+        width={width}
+        height={height}
       />
     </div>
   );
